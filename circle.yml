@@ -1,0 +1,21 @@
+machine:
+  python:
+    version: 3.6.0
+
+dependencies:
+  pre:
+    - pip install --upgrade pip
+
+  override:
+    - pip install -r requirements.txt
+    - pip install codacy-coverage
+
+test:
+  pre:
+    - coverage erase
+  override:
+    - coverage run --omit='*/test_*' --source=bc manage.py test --noinput
+  post:
+    - coverage xml --omit='*/tests_*' --omit='*/wsgi.py'
+    - python-codacy-coverage -r coverage.xml
+

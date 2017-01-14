@@ -1,1 +1,3 @@
 # CP3-django-bucketlistapi
+
+[![CircleCI](https://circleci.com/gh/andela-brotich/CP3-django-bucketlist-api/tree/develop.svg?style=svg)](https://circleci.com/gh/andela-brotich/CP3-django-bucketlist-api/tree/develop) [![Codacy Badge](https://api.codacy.com/project/badge/Grade/611753be5bb64be1944514332e5d158b)](https://www.codacy.com/app/brian-rotich/CP3-django-bucketlist-api) [![Codacy Badge](https://api.codacy.com/project/badge/Coverage/611753be5bb64be1944514332e5d158b)](https://www.codacy.com/app/brian-rotich/CP3-django-bucketlist-api)

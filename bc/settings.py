@@ -21,7 +21,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'rest_framework',
 
-    'bc.api'
+    'bc.api',
 )
 
 REST_FRAMEWORK = {
@@ -77,3 +77,6 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = os.path.join(BASE_DIR, 'static'),
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'static-collected')
+
+TEST_RUNNER = 'rainbowtests.test.runner.RainbowDiscoverRunner'
+RAINBOWTESTS_SHOW_MESSAGES = False

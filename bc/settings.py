@@ -41,7 +41,7 @@ MIDDLEWARE_CLASSES = (
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': 'bucketlist.db',
+        'NAME': 'bucketlist.sqlite',
     }
 }
 

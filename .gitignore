@@ -34,4 +34,4 @@ celerybeat-schedule
 venv/
 ENV/
 
-bucketlist.db
+bucketlist.sqlite

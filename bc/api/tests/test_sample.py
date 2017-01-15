@@ -1,11 +1,16 @@
 from bc.test_config import BaseTestCase
 
 
-class IndexTest(BaseTestCase):
+class BucketListTestCase(BaseTestCase):
 
     def test_sample(self):
-        response = self.client.get('/bucketlist.json', follow=True)
+        data = {
+            'name': 'Create Checkpoint APi',
+            'description': 'Finish this thing man'
 
-        self.assertEqual(200, response.status_code)
+        }
+        response = self.client.post('/bucketlist.json', data=data, follow=True)
 
-        self.assertIn(self.bucketlist.name,response.json())
+        # response = response.json()
+        # self.assertEqual(data['name'], response['name'])
+        # self.assertEqual(data['description'], response['description'])

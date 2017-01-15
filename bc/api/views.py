@@ -4,7 +4,7 @@ from bc.api.models import BucketList
 from bc.api.serializers import BucketListSerializer
 
 
-class BucketListView(viewsets.ModelViewSet):
+class BucketListViewSet(viewsets.ModelViewSet):
 
     queryset = BucketList.objects.all()
     serializer_class = BucketListSerializer

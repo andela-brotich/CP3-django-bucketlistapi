@@ -1,7 +1,13 @@
-from django.http import HttpResponse
+from rest_framework import viewsets
+
+from bc.api.models import BucketList
+from bc.api.serializers import BucketListSerializer
 
 
-def index(request):
-    response = HttpResponse("OK")
-    response["Access-Control-Allow-Origin"] = "*"
-    return response
+class BucketListView(viewsets.ModelViewSet):
+
+    queryset = BucketList.objects.all()
+    serializer_class = BucketListSerializer
+
+
+

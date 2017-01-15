@@ -1,7 +1,10 @@
-from django.conf.urls import url
+from django.conf.urls import url, include
 
-from bc.api import views
+from bc.api.views import BucketListView
+from bc import router
+
+router.register(prefix='bucketlist', viewset=BucketListView)
 
 urlpatterns = [
-    url(r'^$', views.index, name="bc-index")
-]
+
+] + router.urls
